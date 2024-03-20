@@ -59,6 +59,9 @@ class User:
                 print("Bank is bankrupt now")
         else:
             print("Insufficient balance")
+            
+    def available_balance(self):
+        return self.balance
 
     def get_transaction_history(self):
         if len(self.transaction_history) == 0:
@@ -71,8 +74,6 @@ class User:
                     f"Transaction Type: {item.type}, Amount: {item.amount}, Account: {item.account}, Date: {time_format}"
                 )
 
-    def available_balance(self):
-        return self.balance
 
     def get_loan_details(self):
         if len(self.loan_history) == 0:
